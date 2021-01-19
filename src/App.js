@@ -1,4 +1,4 @@
-import Nutrition from './Nutrition'
+import Nutrition from './components/Nutrition'
 
 function App() {
   return (

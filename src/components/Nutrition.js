@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-
+import LazyLoad from 'react-lazyload'
 
 
 
@@ -38,7 +38,10 @@ return (
    {nutritionData.foodList.map((foodItem) => {
     return (
 
-    <h1>{foodItem.id}</h1>
+   <LazyLoad> 
+   <img src={foodItem.img} alt="food"/>
+    </LazyLoad>   
+   
    )
    
     })
