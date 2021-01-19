@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import LazyLoad from 'react-lazyload'
-
+import {Avatar, ListItem, ListItemAvatar} from '@material-ui/core'
 
 
 
@@ -37,11 +37,19 @@ return (
 <div>
    {nutritionData.foodList.map((foodItem) => {
     return (
-
+    <ListItem>
+    <ListItemAvatar>
    <LazyLoad> 
-   <img src={foodItem.img} alt="food"/>
-    </LazyLoad>   
-   
+    <Avatar
+    alt={'Avatar'}
+    src={foodItem.img}
+    >
+
+    </Avatar>
+    </LazyLoad>
+    </ListItemAvatar>
+    </ListItem>
+    
    )
    
     })
